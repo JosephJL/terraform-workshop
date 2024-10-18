@@ -16,6 +16,7 @@ env:
   TF_LOG: INFO
   AWS_REGION: ${{ secrets.AWS_REGION }}
   TF_VAR_STUDENT_ID: ${{ secrets.STUDENT_ID }} # by specifying this variable, we can use it in the terraform code
+  AWS_DYNAMODB_TABLE: ${{ secrets.AWS_DYNAMODB_TABLE }}
 jobs:
   deploy:
     runs-on: ubuntu-latest
