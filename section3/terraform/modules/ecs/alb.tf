@@ -23,7 +23,7 @@ resource "aws_alb_listener" "alb_main_listener" {
 
 # This is the target group that the load balancer will forward traffic to
 resource "aws_alb_target_group" "nestjs_app" {
-  name        = "${var.student_id}-nestjs-tg"
+  name        = "28-nestjs-tg"
   port        = 80
   protocol    = "HTTP"
   vpc_id      = var.vpc_id
@@ -41,7 +41,7 @@ resource "aws_alb_target_group" "nestjs_app" {
 }
 
 resource "aws_alb_target_group" "springboot_app" {
-  name        = "${var.student_id}-springboot-tg"
+  name        = "28-springboot-tg"
   port        = 80
   protocol    = "HTTP"
   vpc_id      = var.vpc_id
